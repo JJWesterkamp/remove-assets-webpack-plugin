@@ -3,7 +3,7 @@
   "description": "A simple webpack plugin to remove assets from compilations.",
   "author": "Jeffrey Westerkamp",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/cjs.js",
   "types": "dist/index.d.ts",
   "peerDependencies": {
     "webpack": "^5.34.0"
