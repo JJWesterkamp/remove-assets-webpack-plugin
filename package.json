@@ -1,0 +1,22 @@
+{
+  "name": "@jjwesterkamp/remove-assets-webpack-plugin",
+  "description": "A simple webpack plugin to remove assets from compilations.",
+  "author": "Jeffrey Westerkamp",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "webpack": "^5.34.0"
+  },
+  "dependencies": {
+    "@types/webpack": "^5.28.0",
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "clean:dist": "rm -rf dist",
+    "build": "npm run clean:dist && tsc"
+  }
+}
