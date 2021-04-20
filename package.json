@@ -19,5 +19,5 @@
     "clean:dist": "rm -rf dist",
     "build": "npm run clean:dist && tsc"
   },
-  "version": "0.1.0"
+  "version": "0.1.2"
 }
