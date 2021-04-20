@@ -1,4 +1,4 @@
-.*
+.nvmrc
 node_modules
 src
 tsconfig.json

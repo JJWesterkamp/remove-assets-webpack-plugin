@@ -1,4 +1,4 @@
-# @jjwesterkamp/remove-assets-wepback-plugin
+# @jjwesterkamp/remove-assets-webpack-plugin
 
 A simple webpack plugin to remove assets from compilations.
 
@@ -6,7 +6,7 @@ A simple webpack plugin to remove assets from compilations.
 ## Installation
 
 ```
-$ npm install --save-dev @jjwesterkamp/remove-assets-webpack-plugins
+$ npm install --save-dev @jjwesterkamp/remove-assets-webpack-plugin
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ $ npm install --save-dev @jjwesterkamp/remove-assets-webpack-plugins
 Add a new plugin instance to your webpack configuration:
 
 ```javascript
-const RemoveAssetsWebpackPlugin = require('@jjwesterkamp/remove-assets-webpack-plugins');
+const RemoveAssetsWebpackPlugin = require('@jjwesterkamp/remove-assets-webpack-plugin');
 
 module.exports = {
     plugins: [
