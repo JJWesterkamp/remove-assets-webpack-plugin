@@ -35,3 +35,9 @@ module.exports = {
     ]
 }
 ```
+
+## License
+
+The MIT License (MIT). See [license file] for more information.
+
+[license file]: https://github.com/JJWesterkamp/remove-assets-webpack-plugin/blob/master/LICENSE
