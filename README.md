@@ -2,7 +2,6 @@
 
 A simple webpack plugin to remove assets from compilations.
 
-
 ## Installation
 
 ```
@@ -35,6 +34,11 @@ module.exports = {
     ]
 }
 ```
+
+When `enableLog` is set to `true`, the plugin will output the used patterns and removed matching assets to the console like in the following image.
+This can be handy for debugging your webpack configuration:
+
+<img width="723" alt="Screenshot 2021-04-21 at 13 07 39" src="https://user-images.githubusercontent.com/12270687/115546240-1032cb80-a2a5-11eb-8c62-5b627ed8bc04.png">
 
 ## License
 
