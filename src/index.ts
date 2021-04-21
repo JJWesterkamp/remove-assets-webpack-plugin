@@ -7,47 +7,29 @@ export interface Options {
 }
 
 export default class RemoveAssetsWebpackPlugin {
-
     constructor(private readonly config: Options) {
     }
 
-    public apply(compiler: Compiler) {
+    public apply(compiler: Compiler): void {
         compiler.hooks.shouldEmit.tap('RemoveAssetsWebpackPlugin', (compilation) => {
-            this.logStart();
+            const matches: [string, RegExp][] = []
 
             AssetsIterator:
             for (const filePath of Object.keys(compilation.assets)) {
                 for (const pattern of this.config.patterns) {
                     if (pattern.test(filePath)) {
-                        if (this.config.enableLog) {
-                            log.asset(filePath)
-                        }
-                        delete compilation.assets[filePath];
-                        continue AssetsIterator;
+                        matches.push([filePath, pattern])
+                        delete compilation.assets[filePath]
+                        continue AssetsIterator
                     }
                 }
             }
 
-            this.logEnd();
-            return true;
-        });
-    }
+            if (this.config.enableLog) {
+                log.logResult(this.config.patterns, matches)
+            }
 
-    private logStart() {
-        if (this.config.enableLog) {
-            log.line();
-            log.text('RemoveAssetsWebpackPlugin');
-            log.line();
-            log.underlined('Patterns');
-            this.config.patterns.forEach(log.pattern)
-            log.blankLine();
-            log.underlined('Patterns');
-        }
-    }
-
-    private logEnd() {
-        if (this.config.enableLog) {
-            log.line();
-        }
+            return true
+        })
     }
 }
