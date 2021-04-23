@@ -1,6 +1,10 @@
 {
   "name": "@jjwesterkamp/remove-assets-webpack-plugin",
   "description": "A simple webpack plugin to remove assets from compilations.",
+  "repository": {
+    "url": "https://github.com/JJWesterkamp/remove-assets-webpack-plugin"
+  },
+  "homepage": "https://github.com/JJWesterkamp/remove-assets-webpack-plugin",
   "author": "Jeffrey Westerkamp",
   "license": "MIT",
   "main": "dist/cjs.js",

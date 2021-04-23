@@ -2,6 +2,9 @@
 
 A simple webpack plugin to remove assets from compilations.
 
+[![npm](https://badgen.net/npm/v/@jjwesterkamp/remove-assets-webpack-plugin?color=green)][npm]
+[![MIT](https://badgen.net/badge/license/MIT/green)][license file]
+
 ## Installation
 
 ```
@@ -18,21 +21,15 @@ const RemoveAssetsWebpackPlugin = require('@jjwesterkamp/remove-assets-webpack-p
 module.exports = {
     plugins: [
         new RemoveAssetsWebpackPlugin({
-
-            // enter RegExp patterns here...
+            enablelog: true,
             patterns: [
-                // For instance, to remove .js and .js.map output from CSS
-                // entries (matches output files within /css/, ending with
-                // .js or .js.map)
+                // To remove .js and .js.map output from CSS entries:
+                // (matches output files within /css/, ending with .js or .js.map)
                 /^css\/.+\.js(\.map)?$/,
             ],
-
-            // optionally enable console output of the used patterns and
-            // matched assets that will be removed from the compilation.
-            enablelog: true
-        })
-    ]
-}
+        }),
+    ],
+};
 ```
 
 When `enableLog` is set to `true`, the plugin will output the used patterns and removed matching assets to the console like in the following image.
@@ -45,3 +42,4 @@ This can be handy for debugging your webpack configuration:
 The MIT License (MIT). See [license file] for more information.
 
 [license file]: https://github.com/JJWesterkamp/remove-assets-webpack-plugin/blob/master/LICENSE
+[npm]: https://www.npmjs.com/package/@jjwesterkamp/remove-assets-webpack-plugin
